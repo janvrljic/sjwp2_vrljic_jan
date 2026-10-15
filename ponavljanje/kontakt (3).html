@@ -1,0 +1,55 @@
+/* Zadatak 2: CSS stiliziranje */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #FC28F7;
+  color: rgb(96, 96, 96);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.55;
+}
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0 0 12px;
+  color: #252525;
+}
+h2 { color: #222; margin-top: 0; }
+p { margin: 8px; }
+.hero, main, .navigacija, footer { max-width: 960px; margin-left: auto; margin-right: auto; }
+.hero { background: #fff; padding: 24px; border-radius: 10px 10px 0 0; }
+.uvod { margin: 8px; }
+.navigacija {
+  display: flex;
+  gap: 0;
+  background: #243f75;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+.navigacija a { color: white; text-decoration: none; padding: 12px 22px; display: block; }
+.navigacija a:hover, .navigacija a:focus { background: #15284d; text-decoration: underline; }
+.kartica { background: white; padding: 22px; margin: 18px auto; border-radius: 10px; box-shadow: 0 2px 8px #0002; }
+ul { margin-top: 4px; }
+.tablica-omot { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; margin: 12px 0; }
+th, td { border: 1px solid #aaa; padding: 9px; text-align: left; vertical-align: top; }
+th { background: #e8eef7; color: #222; }
+.podaci th { width: 25%; }
+.slike { display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-start; }
+.ilustracija { display: block; width: 240px; height: 220px; max-width: 100%; border: 1px solid #ddd; }
+.napomena { max-width: 240px; }
+footer { padding: 18px; text-align: center; color: #333; }
+.forma { max-width: 600px; }
+.forma label { display: block; font-weight: bold; margin: 14px 0 5px; color: #333; }
+.forma input { width: 100%; padding: 10px; border: 1px solid #999; border-radius: 4px; font: inherit; }
+.gumbi { display: flex; gap: 10px; margin-top: 18px; }
+.gumbi button { padding: 10px 18px; border: 0; border-radius: 5px; cursor: pointer; font-weight: bold; }
+.gumbi button[type="submit"] { background: #245da8; color: white; }
+.gumbi button[type="reset"] { background: #e3e3e3; color: #222; }
+@media (max-width: 560px) {
+  body { padding: 10px; }
+  h1 { font-size: 2em; }
+  .navigacija a { padding: 11px 14px; }
+  .kartica { padding: 15px; }
+}
