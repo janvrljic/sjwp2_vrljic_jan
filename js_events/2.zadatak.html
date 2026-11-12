@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadatak 2 - Reakcija na tipkovnicu</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e9eef5;
+        text-align: center;
+        padding-top: 100px;
+      }
+
+      .container {
+        background-color: white;
+        width: 400px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px #aaa;
+      }
+
+      h1 {
+        color: #263b5e;
+      }
+
+      input {
+        padding: 12px;
+        width: 80%;
+        border: 1px solid #aaa;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+
+      #poruka {
+        color: green;
+        font-weight: bold;
+      }
+
+      #tipka {
+        color: #2563eb;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Reakcija na tipkovnicu</h1>
+
+      <p>Upiši nešto u polje:</p>
+
+      <input type="text" id="unos" placeholder="Upiši tekst..." />
+
+      <p id="poruka"></p>
+
+      <p>Pritisnuta tipka:</p>
+      <p id="tipka">Nijedna</p>
+    </div>
+
+    <script>
+      const unos = document.getElementById("unos");
+      const poruka = document.getElementById("poruka");
+      const tipka = document.getElementById("tipka");
+
+      document.addEventListener("keydown", function (event) {
+        if (document.activeElement !== unos) {
+          return;
+        }
+
+        tipka.textContent = event.key;
+
+        if (event.key === "Enter") {
+          poruka.textContent = "Potvrđeno";
+        }
+
+        if (event.key === "Escape") {
+          unos.value = "";
+          poruka.textContent = "Polje je očišćeno!";
+        }
+      });
+    </script>
+  </body>
+</html>
